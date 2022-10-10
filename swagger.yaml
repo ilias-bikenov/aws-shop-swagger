@@ -15,7 +15,7 @@ basePath: "/v2"
 tags:
 - name: "products"
   description: "Products"
-    url: "http://swagger.io"
+  url: "http://swagger.io"
 schemes:
 - "https"
 - "http"
@@ -34,7 +34,7 @@ paths:
           type: "array"
           schema:
             $ref: "#/definitions/product"
-     /products/{id}:
+  /products/{productId}:
     get:
       tags:
       - "products"
@@ -42,6 +42,12 @@ paths:
       description: "Returns product by id"
       produces:
       - "application/json"
+      parameters:
+      - name: "productId"
+        in: "path"
+        description: "ID of product"
+        required: true
+        type: "string"
       responses:
         200:
           description: "successful operation"
