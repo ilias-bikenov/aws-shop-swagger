@@ -47,17 +47,7 @@ paths:
             $ref: "#/definitions/product"
 
 definitions:
-  ApiResponse:
-    type: "object"
-    properties:
-      code:
-        type: "integer"
-        format: "int32"
-      type:
-        type: "string"
-      message:
-        type: "string"
-  Product:
+  product:
     type: "object"
     required:
     - "price"
